@@ -1,0 +1,88 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Marca MiCompraVE */
+  --teal: #1FA9BC;
+  --teal-strong: #15808F;
+  --teal-dark: #0E5F6B;
+  --cream: #F0E7CE;
+  --coral: #F0795E;
+  --coral-strong: #E0604A;
+
+  /* Bandera de Venezuela */
+  --ve-yellow: #FFCC00;
+  --ve-blue: #2A4FD6;
+  --ve-red: #E0394C;
+
+  --up: #35C46A;
+  --down: #F0795E;
+
+  --radius: 22px;
+  --radius-sm: 14px;
+  --transition: 0.22s cubic-bezier(0.4, 0, 0.2, 1);
+  --font: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+/* ---------- MODO OSCURO (por defecto) ---------- */
+:root,
+:root[data-theme="dark"] {
+  --bg: #1a1a1a;
+  --surface: #222222;
+  --surface-2: #2a2a2a;
+  --surface-3: #313131;
+  --border: #383838;
+  --border-strong: #474747;
+  --text: #F2EFE8;
+  --text-muted: #A6A6A0;
+  --text-dim: #6E6E69;
+  --shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+  --accent-pill: var(--teal);
+}
+
+/* ---------- MODO CLARO ---------- */
+:root[data-theme="light"] {
+  --bg: #F7F4EC;
+  --surface: #FFFFFF;
+  --surface-2: #FBF9F2;
+  --surface-3: #F1EEE3;
+  --border: #E7E2D5;
+  --border-strong: #D8D2C2;
+  --text: #1E3A40;
+  --text-muted: #5E767B;
+  --text-dim: #9DB0B4;
+  --shadow: 0 10px 30px rgba(21, 128, 143, 0.12);
+  --accent-pill: var(--teal-strong);
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  transition: background var(--transition), color var(--transition);
+}
+
+#root { min-height: 100vh; }
+
+input, select, button { font-family: inherit; }
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] { -moz-appearance: textfield; }
+
+::selection { background: var(--teal); color: #fff; }
+::placeholder { color: var(--text-dim); }

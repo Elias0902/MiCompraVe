@@ -1,0 +1,58 @@
+// País -> moneda + iso (para bandera flagcdn). El código (cur) debe existir en fx de open.er-api.
+export const COUNTRIES = [
+  { name: 'Estados Unidos',  cur: 'USD', iso: 'us' },
+  { name: 'México',          cur: 'MXN', iso: 'mx' },
+  { name: 'Colombia',        cur: 'COP', iso: 'co' },
+  { name: 'España',          cur: 'EUR', iso: 'es' },
+  { name: 'Chile',           cur: 'CLP', iso: 'cl' },
+  { name: 'Perú',            cur: 'PEN', iso: 'pe' },
+  { name: 'Argentina',       cur: 'ARS', iso: 'ar' },
+  { name: 'Brasil',          cur: 'BRL', iso: 'br' },
+  { name: 'Ecuador',         cur: 'USD', iso: 'ec' },
+  { name: 'Panamá',          cur: 'USD', iso: 'pa' },
+  { name: 'Italia',          cur: 'EUR', iso: 'it' },
+  { name: 'Portugal',        cur: 'EUR', iso: 'pt' },
+  { name: 'Francia',         cur: 'EUR', iso: 'fr' },
+  { name: 'Alemania',        cur: 'EUR', iso: 'de' },
+  { name: 'Reino Unido',     cur: 'GBP', iso: 'gb' },
+  { name: 'Canadá',          cur: 'CAD', iso: 'ca' },
+  { name: 'China',           cur: 'CNY', iso: 'cn' },
+  { name: 'Japón',           cur: 'JPY', iso: 'jp' },
+  { name: 'Corea del Sur',   cur: 'KRW', iso: 'kr' },
+  { name: 'Rep. Dominicana', cur: 'DOP', iso: 'do' },
+  { name: 'Bolivia',         cur: 'BOB', iso: 'bo' },
+  { name: 'Uruguay',         cur: 'UYU', iso: 'uy' },
+  { name: 'Paraguay',        cur: 'PYG', iso: 'py' },
+  { name: 'Costa Rica',      cur: 'CRC', iso: 'cr' },
+  { name: 'Guatemala',       cur: 'GTQ', iso: 'gt' },
+  { name: 'Honduras',        cur: 'HNL', iso: 'hn' },
+  { name: 'Nicaragua',       cur: 'NIO', iso: 'ni' },
+  { name: 'El Salvador',     cur: 'USD', iso: 'sv' },
+  { name: 'Australia',       cur: 'AUD', iso: 'au' },
+  { name: 'Suiza',           cur: 'CHF', iso: 'ch' },
+  { name: 'Turquía',         cur: 'TRY', iso: 'tr' },
+  { name: 'India',           cur: 'INR', iso: 'in' },
+  { name: 'Rusia',           cur: 'RUB', iso: 'ru' },
+  { name: 'Sudáfrica',       cur: 'ZAR', iso: 'za' },
+  { name: 'Arabia Saudita',  cur: 'SAR', iso: 'sa' },
+  { name: 'Emiratos Árabes', cur: 'AED', iso: 'ae' },
+]
+
+export const CURRENCY_NAMES = {
+  USD: 'Dólar estadounidense', EUR: 'Euro', MXN: 'Peso mexicano', COP: 'Peso colombiano',
+  CLP: 'Peso chileno', PEN: 'Sol peruano', ARS: 'Peso argentino', BRL: 'Real brasileño',
+  GBP: 'Libra esterlina', CAD: 'Dólar canadiense', CNY: 'Yuan chino', JPY: 'Yen japonés',
+  KRW: 'Won coreano', DOP: 'Peso dominicano', BOB: 'Boliviano', UYU: 'Peso uruguayo',
+  PYG: 'Guaraní', CRC: 'Colón costarricense', GTQ: 'Quetzal', HNL: 'Lempira',
+  NIO: 'Córdoba', AUD: 'Dólar australiano', CHF: 'Franco suizo', TRY: 'Lira turca',
+  INR: 'Rupia india', RUB: 'Rublo ruso', ZAR: 'Rand', SAR: 'Riyal saudí', AED: 'Dírham',
+  PAB: 'Balboa', BZD: 'Dólar beliceño', CUP: 'Peso cubano',
+}
+
+// ISO de país por código de moneda (para banderas en búsqueda/listas).
+export const CUR_ISO = {
+  USD: 'us', EUR: 'eu', MXN: 'mx', COP: 'co', CLP: 'cl', PEN: 'pe', ARS: 'ar', BRL: 'br',
+  GBP: 'gb', CAD: 'ca', CNY: 'cn', JPY: 'jp', KRW: 'kr', DOP: 'do', BOB: 'bo', UYU: 'uy',
+  PYG: 'py', CRC: 'cr', GTQ: 'gt', HNL: 'hn', NIO: 'ni', AUD: 'au', CHF: 'ch', TRY: 'tr',
+  INR: 'in', RUB: 'ru', ZAR: 'za', SAR: 'sa', AED: 'ae', VES: 've',
+}

@@ -1,0 +1,30 @@
+<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="MiCompraVE">
+  <defs>
+    <linearGradient id="arrow" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0" stop-color="#E0604A"/>
+      <stop offset="1" stop-color="#F8927A"/>
+    </linearGradient>
+  </defs>
+  <!-- Fondo teal redondeado -->
+  <rect x="32" y="32" width="448" height="448" rx="104" fill="#15808F"/>
+  <!-- Bolsa de compras (contorno crema) -->
+  <path d="M150 200 h212 v178 a14 14 0 0 1 -14 14 H164 a14 14 0 0 1 -14 -14 Z"
+        fill="none" stroke="#F0E7CE" stroke-width="20" stroke-linejoin="round"/>
+  <!-- Asa de la bolsa -->
+  <path d="M196 210 v-26 a60 60 0 0 1 120 0 v26"
+        fill="none" stroke="#F0E7CE" stroke-width="20" stroke-linecap="round"/>
+  <!-- Flecha de tendencia subiendo (coral) -->
+  <path d="M186 350 L246 296 L286 326 L350 250"
+        fill="none" stroke="url(#arrow)" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M312 246 H356 V290" fill="none" stroke="url(#arrow)" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Punto bandera de Venezuela -->
+  <g>
+    <clipPath id="flag"><circle cx="316" cy="356" r="20"/></clipPath>
+    <g clip-path="url(#flag)">
+      <rect x="296" y="336" width="40" height="13.3" fill="#FFCC00"/>
+      <rect x="296" y="349.3" width="40" height="13.3" fill="#00247D"/>
+      <rect x="296" y="362.6" width="40" height="13.4" fill="#CF142B"/>
+    </g>
+    <circle cx="316" cy="356" r="20" fill="none" stroke="#15808F" stroke-width="3"/>
+  </g>
+</svg>
