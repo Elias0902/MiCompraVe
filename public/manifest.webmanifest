@@ -1,0 +1,19 @@
+{
+  "name": "MiCompraVE — Dólar a Bolívares",
+  "short_name": "MiCompraVE",
+  "description": "Conversor de dólar a bolívares con tasas BCV y paralelo en vivo, tasas del mundo y carrito de compras.",
+  "lang": "es",
+  "dir": "ltr",
+  "start_url": ".",
+  "scope": ".",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#1a1a1a",
+  "theme_color": "#15808F",
+  "categories": ["finance", "shopping", "utilities"],
+  "icons": [
+    { "src": "icon-192.png",          "sizes": "192x192", "type": "image/png" },
+    { "src": "icon-512.png",          "sizes": "512x512", "type": "image/png" },
+    { "src": "icon-512-maskable.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

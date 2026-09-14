@@ -3,13 +3,33 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/logo.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover" />
     <meta name="theme-color" content="#15808F" />
     <title>MiCompraVE — Dólar a Bolívares</title>
+    <meta name="description" content="Conversor de dólar a bolívares con tasas BCV y paralelo en vivo, tasas del mundo y carrito de compras." />
+
+    <!-- PWA: instalable como acceso directo en el celular -->
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="MiCompraVE" />
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+    <script>
+      // Registra el service worker con ruta relativa a la pagina,
+      // asi funciona igual en local, en GitHub Pages y al compartir el enlace.
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function () {
+          var swUrl = new URL('sw.js', document.baseURI).href;
+          navigator.serviceWorker.register(swUrl).catch(function () {});
+        });
+      }
+    </script>
   </body>
 </html>
