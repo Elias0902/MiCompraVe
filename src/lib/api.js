@@ -30,7 +30,7 @@ export async function fetchRates() {
       rates.bcv = bcv
       for (const c of CURRENCIES) {
         const sym = c.short
-        if (sym && sym !== 'USD' && sym !== 'USDT' && fx[sym] > 0) rates[c.key] = bcv / fx[sym]
+        if (sym && sym !== 'USD' && sym !== 'USDT' && sym !== 'PROM' && fx[sym] > 0) rates[c.key] = bcv / fx[sym]
       }
     }
   } catch { /* seguimos */ }
@@ -48,6 +48,9 @@ export async function fetchRates() {
     const eur = arr.find(x => x.moneda === 'EUR')
     if (eur?.promedio > 0) rates.eur = eur.promedio
   } catch { /* usamos fx */ }
+
+  // Promedio = media entre el dólar BCV y el paralelo (USDT). Se calcula en la app.
+  if (rates.bcv > 0 && rates.usdt > 0) rates.prom = (rates.bcv + rates.usdt) / 2
 
   return { rates, fx, bcv }
 }

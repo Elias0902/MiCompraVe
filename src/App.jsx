@@ -14,7 +14,7 @@ const STORAGE_KEY = 'micompreve-v4'
 const HIST_CODES = ['ves', 'eur', 'jpy', 'krw', 'gbp', 'cny', 'brl', 'mxn', 'cad', 'cop',
   'clp', 'pen', 'ars', 'aud', 'chf', 'try', 'inr', 'zar', 'dop', 'bob', 'uyu', 'pyg',
   'crc', 'gtq', 'hnl', 'nio', 'sar', 'aed', 'rub']
-const DEFAULT_SETTINGS = { theme: 'dark', defaultCurrency: 'bcv', pinned: ['bcv', 'usdt', 'eur'] }
+const DEFAULT_SETTINGS = { theme: 'dark', defaultCurrency: 'bcv', pinned: ['bcv', 'usdt', 'prom', 'eur'] }
 
 function loadState() {
   try {
@@ -24,9 +24,24 @@ function loadState() {
   return null
 }
 
+// Une los ajustes guardados con los por defecto y asegura que la pastilla
+// "Promedio" (prom) aparezca aunque el usuario ya tuviera ajustes previos.
+function initSettings(saved) {
+  const merged = { ...DEFAULT_SETTINGS, ...(saved?.settings || {}) }
+  if (!Array.isArray(merged.pinned) || merged.pinned.length === 0) {
+    merged.pinned = [...DEFAULT_SETTINGS.pinned]
+  }
+  if (!merged.pinned.includes('prom')) {
+    const i = merged.pinned.indexOf('usdt')
+    if (i >= 0) merged.pinned.splice(i + 1, 0, 'prom')
+    else merged.pinned.push('prom')
+  }
+  return merged
+}
+
 export default function App() {
   const saved = loadState()
-  const [settings, setSettings] = useState({ ...DEFAULT_SETTINGS, ...(saved?.settings || {}) })
+  const [settings, setSettings] = useState(() => initSettings(saved))
   const [rates, setRates] = useState(saved?.rates || {})
   const [fx, setFx] = useState(saved?.fx || {})
   const [bcv, setBcv] = useState(saved?.bcv || 0)

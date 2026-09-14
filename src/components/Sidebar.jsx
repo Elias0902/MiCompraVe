@@ -12,7 +12,7 @@ function NavContent({ view, onNavigate }) {
   return (
     <>
       <div className="sb-brand">
-        <img src="/logo.svg" alt="MiCompraVE" />
+        <img src={`${import.meta.env.BASE_URL}logo.svg`} alt="MiCompraVE" />
         <span>MiCompra<b>VE</b></span>
       </div>
       <nav className="sb-nav">

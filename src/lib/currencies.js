@@ -3,6 +3,7 @@
 export const CURRENCIES = [
   { key: 'bcv',  label: 'Dólar BCV',        short: 'USD',  symbol: '$',  group: 'main',  iso: 've',      hist: 'ves' },
   { key: 'usdt', label: 'USDT (paralelo)',  short: 'USDT', symbol: '$',  group: 'main',  iso: 'binance', hist: null },
+  { key: 'prom', label: 'Promedio',         short: 'PROM', symbol: '$',  group: 'main',  iso: 've',      hist: null },
   { key: 'eur',  label: 'Euro',             short: 'EUR',  symbol: '€',  group: 'main',  iso: 'eu', hist: 'eur' },
   { key: 'jpy',  label: 'Yen japonés',      short: 'JPY',  symbol: '¥',  group: 'extra', iso: 'jp', hist: 'jpy' },
   { key: 'krw',  label: 'Won coreano',      short: 'KRW',  symbol: '₩',  group: 'extra', iso: 'kr', hist: 'krw' },

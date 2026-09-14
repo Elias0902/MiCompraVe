@@ -12,7 +12,7 @@ export default function Topbar({ onMenu, view }) {
       <button className="tb-menu" onClick={onMenu} aria-label="Menú">
         <i className="fas fa-bars" />
       </button>
-      <img src="/logo.svg" alt="" className="tb-logo" />
+      <img src={`${import.meta.env.BASE_URL}logo.svg`} alt="" className="tb-logo" />
       <h1 className="tb-title">{TITLES[view] || 'MiCompraVE'}</h1>
     </header>
   )
